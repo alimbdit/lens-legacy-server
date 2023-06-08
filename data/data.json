@@ -1,0 +1,132 @@
+[
+    {
+      "_id": "64809cdfc87ec0ab8310005e",
+      "name": "Portrait Photography",
+      "image": "https://example.com/portrait.jpg",
+      "instructorName": "John Smith",
+      "instructorImage": "https://example.com/john_smith.jpg",
+      "email": "johnsmith@example.com",
+      "availableSeats": 18,
+      "fees": 150
+    },
+    {
+      "_id": "64809cdfc87ec0ab8310005f",
+      "name": "Landscape Photography Masterclass",
+      "image": "https://example.com/landscape.jpg",
+      "instructorName": "Emily Johnson",
+      "instructorImage": "https://example.com/emily_johnson.jpg",
+      "email": "emilyjohnson@example.com",
+      "availableSeats": 20,
+      "fees": 200
+    },
+    {
+      "_id": "64809cdfc87ec0ab83100060",
+      "name": "Wildlife Photography Workshop",
+      "image": "https://example.com/wildlife.jpg",
+      "instructorName": "David Thompson",
+      "instructorImage": "https://example.com/david_thompson.jpg",
+      "email": "davidthompson@example.com",
+      "availableSeats": 20,
+      "fees": 180
+    },
+    {
+      "_id": "64809cdfc87ec0ab83100061",
+      "name": "Street Photography Secrets",
+      "image": "https://example.com/street.jpg",
+      "instructorName": "Sarah Davis",
+      "instructorImage": "https://example.com/sarah_davis.jpg",
+      "email": "sarahdavis@example.com",
+      "availableSeats": 20,
+      "fees": 120
+    },
+    {
+      "_id": "64809cdfc87ec0ab83100062",
+      "name": "Fashion Photography Intensive",
+      "image": "https://example.com/fashion.jpg",
+      "instructorName": "Michael Anderson",
+      "instructorImage": "https://example.com/michael_anderson.jpg",
+      "email": "michaelanderson@example.com",
+      "availableSeats": 20,
+      "fees": 250
+    },
+    {
+      "_id": "64809cdfc87ec0ab83100063",
+      "name": "Still Life Photography Basics",
+      "image": "https://example.com/stilllife.jpg",
+      "instructorName": "Emma Wilson",
+      "instructorImage": "https://example.com/emma_wilson.jpg",
+      "email": "emmawilson@example.com",
+      "availableSeats": 20,
+      "fees": 100
+    },
+    {
+      "_id": "64809cdfc87ec0ab83100064",
+      "name": "Architectural Photography Workshop",
+      "image": "https://example.com/architecture.jpg",
+      "instructorName": "Daniel Roberts",
+      "instructorImage": "https://example.com/daniel_roberts.jpg",
+      "email": "danielroberts@example.com",
+      "availableSeats": 20,
+      "fees": 180
+    },
+    {
+      "_id": "64809cdfc87ec0ab83100065",
+      "name": "Macro Photography Explained",
+      "image": "https://example.com/macro.jpg",
+      "instructorName": "Olivia Clark",
+      "instructorImage": "https://example.com/olivia_clark.jpg",
+      "email": "oliviaclark@example.com",
+      "availableSeats": 20,
+      "fees": 150
+    },
+    {
+      "_id": "64809cdfc87ec0ab83100066",
+      "name": "Still Life Photography Basics",
+      "image": "https://example.com/stilllife.jpg",
+      "instructorName": "Emma Wilson",
+      "instructorImage": "https://example.com/emma_wilson.jpg",
+      "email": "emmawilson@example.com",
+      "availableSeats": 20,
+      "fees": 100
+    },
+    {
+      "_id": "64809cdfc87ec0ab83100067",
+      "name": "Architectural Photography Workshop",
+      "image": "https://example.com/architecture.jpg",
+      "instructorName": "Daniel Roberts",
+      "instructorImage": "https://example.com/daniel_roberts.jpg",
+      "email": "danielroberts@example.com",
+      "availableSeats": 20,
+      "fees": 180
+    },
+    {
+      "_id": "64809cdfc87ec0ab83100068",
+      "name": "Macro Photography Explained",
+      "image": "https://example.com/macro.jpg",
+      "instructorName": "Olivia Clark",
+      "instructorImage": "https://example.com/olivia_clark.jpg",
+      "email": "oliviaclark@example.com",
+      "availableSeats": 20,
+      "fees": 150
+    },
+    {
+      "_id": "64809cdfc87ec0ab83100069",
+      "name": "Sports Photography Techniques",
+      "image": "https://example.com/sports.jpg",
+      "instructorName": "Matthew Turner",
+      "instructorImage": "https://example.com/matthew_turner.jpg",
+      "email": "matthewturner@example.com",
+      "availableSeats": 20,
+      "fees": 200
+    },
+    {
+      "_id": "64809cdfc87ec0ab8310006a",
+      "name": "Documentary Photography Masterclass",
+      "image": "https://example.com/documentary.jpg",
+      "instructorName": "Sophia Lee",
+      "instructorImage": "https://example.com/sophia_lee.jpg",
+      "email": "sophialee@example.com",
+      "availableSeats": 20,
+      "fees": 220
+    }
+  ]
