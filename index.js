@@ -11,9 +11,9 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-// const uri = `mongodb://0.0.0.0:27017`;
+const uri = `mongodb://0.0.0.0:27017`;
 
-const uri =`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.h73vuqp.mongodb.net/?retryWrites=true&w=majority`;
+// const uri =`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.h73vuqp.mongodb.net/?retryWrites=true&w=majority`;
 
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 const client = new MongoClient(uri, {
@@ -48,6 +48,13 @@ app.post('/newUsers', async(req, res) => {
 
 
     // add class api
+
+    app.get('/myClass', async(req, res) => {
+      const query = req.query.email;
+      console.log(query)
+      const result = await classCollection.find({email:query}).toArray();
+      res.send(result)
+    })
 
     app.post("/newClass", async (req, res) => {
       const body = req.body;
