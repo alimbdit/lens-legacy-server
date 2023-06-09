@@ -1,4 +1,4 @@
-const { MongoClient, ServerApiVersion } = require("mongodb");
+const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
 const express = require("express");
 const cors = require("cors");
 const port = process.env.PORT || 5000;
@@ -32,34 +32,52 @@ async function run() {
     const classCollection = client.db("lensLegacyDB").collection("classes");
     const userCollection = client.db("lensLegacyDB").collection("users");
 
-
-
-// add user api
-app.post('/newUsers', async(req, res) => {
-    const body = req.body;
-    const existUser = await userCollection.findOne({email:body.email});
-    if(existUser){
+    // add user api
+    app.post("/newUsers", async (req, res) => {
+      const body = req.body;
+      const existUser = await userCollection.findOne({ email: body.email });
+      if (existUser) {
         return res.send({ message: "User already exist!" });
-    }
-    const result = await userCollection.insertOne(body);
-    res.send(result)
-})
+      }
+      const result = await userCollection.insertOne(body);
+      res.send(result);
+    });
 
+    //  class apis
 
+ 
 
-    // add class api
-
-    app.get('/myClass', async(req, res) => {
+    app.get("/myClass", async (req, res) => {
       const query = req.query.email;
-      console.log(query)
-      const result = await classCollection.find({email:query}).toArray();
-      res.send(result)
-    })
+      console.log(query);
+      const result = await classCollection.find({ email: query }).toArray();
+      res.send(result);
+    });
 
     app.post("/newClass", async (req, res) => {
       const body = req.body;
       console.log(body);
-      const result = await classCollection.insertOne(body)
+      const result = await classCollection.insertOne(body);
+      res.send(result);
+    });
+
+    app.put("/updateClass/:id", async (req, res) => {
+      const id = req.params.id;
+      
+      const updateClass = req.body
+      console.log(updateClass)
+      const updateDoc = {
+        $set: {
+        price: updateClass.price,
+        className: updateClass.className,
+        seat: updateClass.seat,
+        imgUrl: updateClass.imgUrl
+      
+      },
+      }
+      const filter = { _id: new ObjectId(id) };
+
+      const result = await classCollection.updateOne(filter, updateDoc);
       res.send(result)
     });
 
