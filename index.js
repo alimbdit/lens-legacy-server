@@ -45,40 +45,42 @@ async function run() {
 
     //  class apis
 
- 
+    app.get("/classes", async(req, res) => {
+      const result = await classCollection.find().toArray();
+      res.send(result)
+    })
 
     app.get("/myClass", async (req, res) => {
-      const query = req.query.email;
-      console.log(query);
-      const result = await classCollection.find({ email: query }).toArray();
+      const query = req.query;
+      // console.log("52", query);
+      const result = await classCollection.find(query).toArray();
       res.send(result);
     });
 
     app.post("/newClass", async (req, res) => {
       const body = req.body;
-      console.log(body);
+      // console.log(body);
       const result = await classCollection.insertOne(body);
       res.send(result);
     });
 
     app.put("/updateClass/:id", async (req, res) => {
       const id = req.params.id;
-      
-      const updateClass = req.body
-      console.log(updateClass)
+
+      const updateClass = req.body;
+      // console.log(updateClass);
       const updateDoc = {
         $set: {
-        price: updateClass.price,
-        className: updateClass.className,
-        seat: updateClass.seat,
-        imgUrl: updateClass.imgUrl
-      
-      },
-      }
+          price: updateClass.price,
+          className: updateClass.className,
+          seat: updateClass.seat,
+          imgUrl: updateClass.imgUrl,
+        },
+      };
       const filter = { _id: new ObjectId(id) };
 
       const result = await classCollection.updateOne(filter, updateDoc);
-      res.send(result)
+      res.send(result);
     });
 
     // Send a ping to confirm a successful connection
