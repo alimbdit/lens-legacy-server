@@ -83,10 +83,25 @@ async function run() {
       res.send(result);
     });
 
-    app.put('/updateStatus/:id', async(req, res) => {
+app.put('/feedback/:id', async(req, res) => {
+  const id = req.params.id;
+  const feedback = req.body.feedback;
+  console.log(feedback)
+  const options = { upsert: true };
+  const updateDoc = {
+    $set: {
+      feedback: feedback
+    },
+  };
+  const filter = {_id: new ObjectId(id)};
+  const result = await classCollection.updateOne(filter, updateDoc, options);
+      res.send(result)
+})
+
+    app.patch('/updateStatus/:id', async(req, res) => {
       const id = req.params.id
       const updateStatus = req.body;
-      console.log(updateStatus, id)
+      // console.log(updateStatus, id)
       const updateDoc = {
         $set:{
           status: updateStatus.status,
