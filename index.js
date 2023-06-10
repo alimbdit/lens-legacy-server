@@ -11,9 +11,9 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-const uri = `mongodb://0.0.0.0:27017`;
+// const uri = `mongodb://0.0.0.0:27017`;
 
-// const uri =`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.h73vuqp.mongodb.net/?retryWrites=true&w=majority`;
+const uri =`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.h73vuqp.mongodb.net/?retryWrites=true&w=majority`;
 
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 const client = new MongoClient(uri, {
@@ -32,7 +32,13 @@ async function run() {
     const classCollection = client.db("lensLegacyDB").collection("classes");
     const userCollection = client.db("lensLegacyDB").collection("users");
 
-    // add user api
+    // user api
+
+    app.get('/users', async(req, res) => {
+      const result = await userCollection.find().toArray();
+      res.send(result)
+    })
+
     app.post("/newUsers", async (req, res) => {
       const body = req.body;
       const existUser = await userCollection.findOne({ email: body.email });
@@ -42,6 +48,17 @@ async function run() {
       const result = await userCollection.insertOne(body);
       res.send(result);
     });
+
+    app.put('/user/:id', async(req, res) => {
+      const id = req.params.id;
+      const role = req.body;
+      const filter = {_id: new ObjectId(id)}
+      const updateDoc = {
+        $set: role,
+      };
+      const result = await userCollection.updateOne(filter, updateDoc);
+      res.send(result)
+    })
 
     //  class apis
 
