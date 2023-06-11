@@ -60,7 +60,21 @@ async function run() {
       res.send(result)
     })
 
+    //  instructor api
+
+    app.get('/instructors', async(req, res) => {
+      const filter = {role: 'instructor'}
+      const result = await userCollection.find(filter).toArray();
+      res.send(result)
+    })
+
     //  class apis
+
+    app.get('/approvedClasses', async(req, res) => {
+      const filter = {status: "approved"}
+      const result = await classCollection.find(filter).toArray();
+      res.send(result)
+    })
 
     app.get("/classes", async(req, res) => {
       const result = await classCollection.find().toArray();
@@ -103,7 +117,7 @@ async function run() {
 app.put('/feedback/:id', async(req, res) => {
   const id = req.params.id;
   const feedback = req.body.feedback;
-  console.log(feedback)
+  // console.log(feedback)
   const options = { upsert: true };
   const updateDoc = {
     $set: {
