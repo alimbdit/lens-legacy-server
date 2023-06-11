@@ -3,6 +3,7 @@ const express = require("express");
 const cors = require("cors");
 const port = process.env.PORT || 5000;
 require("dotenv").config();
+const jwt = require('jsonwebtoken')
 
 const app = express();
 
@@ -10,6 +11,29 @@ const app = express();
 
 app.use(express.json());
 app.use(cors());
+
+const verifyJWT = (req, res, next) => {
+  const authorization = req.headers.authorization;
+  
+  if(!authorization){
+    return res.status(401).send({error: true, message: 'Unauthorized access'})
+  }
+  // token
+  const token = authorization.split(' ')[1];
+  // console.log(token)
+  jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, function(err, decoded) {
+    console.log(decoded, err) // bar
+    if(err){
+      return res.status(401).send({error: true, message: "Unauthorized access"})
+    }
+    req.decoded = decoded;
+    next()
+  });
+
+  
+}
+
+
 
 // const uri = `mongodb://0.0.0.0:27017`;
 
@@ -34,6 +58,18 @@ async function run() {
 
 
 
+    // ! JWT sign
+
+    app.post('/jwt', (req, res) => {
+      const user = req.body;
+
+      const token = jwt.sign(user, process.env.ACCESS_TOKEN_SECRET,  { expiresIn: '1h' });
+      res.send({token})
+
+    })
+
+
+
     // getting admin
 
     app.get('/user/admin/:email', async(req, res) => {
@@ -54,7 +90,7 @@ async function run() {
 
     // user api
 
-    app.get('/users', async(req, res) => {
+    app.get('/users',verifyJWT,  async(req, res) => { 
       const result = await userCollection.find().toArray();
       res.send(result)
     })
