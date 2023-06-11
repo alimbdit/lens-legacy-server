@@ -32,6 +32,26 @@ async function run() {
     const classCollection = client.db("lensLegacyDB").collection("classes");
     const userCollection = client.db("lensLegacyDB").collection("users");
 
+
+
+    // getting admin
+
+    app.get('/user/admin/:email', async(req, res) => {
+      const email = req.params.email;
+      const query = {email: email};
+      const result = await userCollection.findOne(query);
+
+     res.send({admin: result.role === 'admin'})
+    })
+    // getting instructor
+
+    app.get('/user/instructor/:email', async(req, res) => {
+      const email = req.params.email;
+      const query = {email: email};
+      const result = await userCollection.findOne(query);
+      res.send({instructor: result.role === 'instructor' })
+    })
+
     // user api
 
     app.get('/users', async(req, res) => {
