@@ -274,30 +274,12 @@ async function run() {
             email: email
           }
         },
-        // {
-        //   $addFields: {
-        //     formattedDate: {
-        //       $dateFromString: {
-        //         dateString: "$date"
-        //       }
-        //     }
-        //   }
-        // },
+       
         {
           $sort: {
             date: -1 // Use -1 for descending order
           }
         },
-        // {
-        //   $project: {
-        //     formattedDate: {
-        //       $dateToString: {
-        //         format: "%Y-%m-%d %H:%M:%S",
-        //         date: "$date"
-        //       }
-        //     }
-        //   }
-        // }
       ]).toArray();
       // const result = await paymentCollection.find(filter).toArray();
       // res.send(result)
