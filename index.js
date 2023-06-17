@@ -104,7 +104,7 @@ async function run() {
     app.get("/user/admin/:email", verifyJWT, async (req, res) => {
       const email = req.params.email;
       if (email !== req.decoded.email) {
-        return res.send({ admin: false });
+        res.send({ admin: false });
       }
       const query = { email: email };
       const result = await userCollection.findOne(query);
@@ -116,7 +116,7 @@ async function run() {
     app.get("/user/instructor/:email",verifyJWT, async (req, res) => {
       const email = req.params.email;
       if (email !== req.decoded.email) {
-        return res.send({ instructor: false });
+       res.send({ instructor: false });
       }
       const query = { email: email };
       const result = await userCollection.findOne(query);
@@ -213,6 +213,7 @@ async function run() {
         currency: "usd",
         payment_method_types: ["card"],
       });
+ 
       res.send({
         clientSecret: paymentIntent.client_secret,
       });
@@ -224,7 +225,7 @@ async function run() {
       // console.log(body)
       const insertedPayment = await paymentCollection.insertOne(body);
       const user = await userCollection.findOne({ email: body.email });
-      console.log(user);
+      // console.log(user, '228');
       if (user) {
         if (user?.enrolledClass) {
           await userCollection.updateOne(filter, {
