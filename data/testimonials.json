@@ -1,0 +1,37 @@
+[
+    {
+      "id": "b1",
+      "userPhoto": "https://images.unsplash.com/photo-1474176857210-7287d38d27c6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
+      "userName": "John Smith",
+      "designation": "Photography Enthusiast",
+      "review": "The photography course exceeded my expectations! The instructors were knowledgeable and provided valuable insights. I learned various techniques that improved my skills. Highly recommended!"
+    },
+    {
+      "id": "b2",
+      "userPhoto": "https://images.unsplash.com/photo-1533689476487-034f57831a58?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=871&q=80",
+      "userName": "Sarah Johnson",
+      "designation": "Professional Photographer",
+      "review": "I've been a photographer for years, but I still gained a lot from the advanced lighting workshop. The hands-on approach and practical tips helped me elevate my photography to the next level. Great experience!"
+    },
+    {
+      "id": "b3",
+      "userPhoto": "https://images.unsplash.com/photo-1480406537807-00c0914e8d40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
+      "userName": "David Lee",
+      "designation": "Graphic Designer",
+      "review": "As a graphic designer, learning photography has enhanced my visual understanding. The composition and color theory classes were invaluable. The course has made me a better designer. Thank you!"
+    },
+    {
+      "id": "b4",
+      "userPhoto": "https://images.unsplash.com/photo-1518991669955-9c7e78ec80ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=580&q=80",
+      "userName": "Emily Thompson",
+      "designation": "Event Photographer",
+      "review": "Attending the event photography seminar was a game-changer for me. I gained practical insights into capturing candid moments and dealing with challenging lighting conditions. I'm now more confident in my abilities!"
+    },
+    {
+      "id": "b5",
+      "userPhoto": "https://images.unsplash.com/photo-1525357816819-392d2380d821?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+      "userName": "Michael Brown",
+      "designation": "Travel Blogger",
+      "review": "The travel photography workshop was incredible! I learned how to capture stunning landscapes and document my adventures effectively. It's improved the quality of my travel blog and engaged my audience even more!"
+    }
+  ]

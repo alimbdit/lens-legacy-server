@@ -1,0 +1,57 @@
+[
+    {
+      "id": 1,
+      "eventName": "Introduction to Digital Photography",
+      "image": "https://i.ibb.co/W2NYD9j/photographer-2179204-640.jpg",
+      "location": "123 Main Street, Cityville",
+      "date": "2023-07-15",
+      "startTime": "10:00 AM",
+      "endTime": "12:00 PM",
+      "description": "Learn the basics of digital photography, including camera settings, exposure, and composition techniques."
+    },
+    {
+      "id": 2,
+      "eventName": "Portrait Photography Masterclass",
+      "image": "https://i.ibb.co/SvjZmzr/60294816e5abae001c5260be.jpg",
+      "location": "456 Oak Avenue, Townsville",
+      "date": "2023-08-05",
+      "startTime": "2:00 PM",
+      "endTime": "5:00 PM",
+      "description": "Enhance your portrait photography skills with professional tips and tricks. Topics include lighting setups, posing, and capturing expressions."
+    },
+    {
+      "id": 3,
+      "eventName": "Landscape Photography Workshop",
+      "image": "https://i.ibb.co/LhHKFr4/photographer-407068-1280.jpg",
+      "location": "Nature Park, Countryside",
+      "date": "2023-09-10",
+      "startTime": "9:00 AM",
+      "endTime": "4:00 PM",
+      "description": "Join us for a full-day workshop on capturing stunning landscape photographs. Learn about composition, using filters, and post-processing techniques."
+    },
+    {
+      "id": 4,
+      "eventName": "Street Photography Expedition",
+      "image": "https://i.ibb.co/NpW5DkG/man-3672010-1280.jpg",
+      "location": "City Center, Urbanville",
+      "date": "2023-10-21",
+      "startTime": "3:00 PM",
+      "endTime": "7:00 PM",
+      "description": "Explore the art of street photography in the vibrant city atmosphere. This event includes a guided walk, tips on capturing decisive moments, and photographing urban life."
+    },
+    {
+      "id": 5,
+      "eventName": "Food Photography Seminar",
+      "image": "https://i.ibb.co/f4Kvg0V/istockphoto-1211913129-612x612.jpg",
+      "location": "Gourmet Restaurant, Foodtown",
+      "date": "2023-11-12",
+      "startTime": "6:30 PM",
+      "endTime": "8:30 PM",
+      "description": "Discover the art of capturing mouthwatering food photographs. Topics include lighting, styling, and editing techniques to make your food images stand out."
+    }
+  ]
+
+  
+
+
+

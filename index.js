@@ -13,6 +13,10 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+const events = require('./data/events.json')
+const tutorials = require('./data/tutorials.json')
+const testimonials = require('./data/testimonials.json')
+
 // ! JWT token verify
 const verifyJWT = (req, res, next) => {
   const authorization = req.headers.authorization;
@@ -432,6 +436,26 @@ async function run() {
   }
 }
 run().catch(console.dir);
+
+
+//  ^ tutorials data
+
+app.get('/tutorials', (req, res) => {
+  res.send(tutorials)
+})
+
+
+// ^ testimonials data
+app.get('/testimonials', (req, res)=>{
+  res.send(testimonials);
+})
+
+
+//  ^ events data
+app.get('/events', (req, res) => {
+  res.send(events)
+})
+
 
 app.get("/", (req, res) => {
   res.send("lens legacy is running.");

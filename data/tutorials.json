@@ -1,0 +1,43 @@
+[
+    {
+        "id": "a1",
+        "tutorialName": "PHOTOGRAPHY BASICS",
+        "thumbnail": "https://i.ibb.co/h24KJsT/hq720-1.webp",
+        "videoUrl": "https://youtu.be/V7z7BAZdt2M",
+        "creator": "David Manning",
+        "publishDate": "04 May 2023"
+    },
+    {
+        "id": "a2",
+        "tutorialName": "7 PHOTOGRAPHY MISTAKES",
+        "thumbnail": "https://i.ibb.co/1ZFLqhz/hq720-2.webp",
+        "videoUrl": "https://youtu.be/ZHnNyKQsdLw",
+        "creator": "Nigel Danson",
+        "publishDate": "20 Mar 2023"
+    },
+    {
+        "id": "a3",
+        "tutorialName": "5 Portrait Photography Tips",
+        "thumbnail": "https://i.ibb.co/MSRdxs2/protrat.webp",
+        "videoUrl": "https://youtu.be/qWU1q0oLPbI",
+        "creator": "NSB Pictures",
+        "publishDate": "27 Apr 2022"
+    },
+    {
+        "id": "a4",
+        "tutorialName": "How to Shoot Manual",
+        "thumbnail": "https://i.ibb.co/58mMyc0/manual.webp",
+        "videoUrl": "https://youtu.be/uyXiWF3mI2s",
+        "creator": "Hyun Ralph Jeong",
+        "publishDate": "4 Aug 2019"
+    },
+    {
+        "id": "a5",
+        "tutorialName": "Macro Photography for Beginners",
+        "thumbnail": "https://i.ibb.co/hKPQXYf/hq720.webp",
+        "videoUrl": "https://youtu.be/YTl9-VWe1xg",
+        "creator": "Micael Widell",
+        "publishDate": "16 Mar 2022"
+    }
+
+]
